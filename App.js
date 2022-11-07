@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import * as React from 'react';
-import axios from "axios";
+
+// import axios from "axios";
 import {
   StyleSheet,
   Text,
@@ -191,7 +192,7 @@ const options = {
 };
 
 axios.request(options).then(function (response) {
-  setData(response.data[0].provinces.[0])
+  setData(response.data[0].provinces)
 }).catch(function (error) {
 	console.error(error);
 });
